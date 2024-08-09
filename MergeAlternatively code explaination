@@ -1,0 +1,34 @@
+MergeAlternatively code explaination
+
+My code effectively merges two strings, word1 and word2, by alternating their characters and then appending any remaining characters from the longer string. Here's a detailed explanation:
+
+Initialization:
+
+StringBuilder sb = new StringBuilder();
+Creates a StringBuilder to build the result string efficiently.
+
+int i = 0; and int j = 0;
+These are indices for iterating through word1 and word2, respectively.
+
+boolean flag = true;
+This boolean flag helps alternate between characters from word1 and word2.
+
+Alternating Character Addition:
+
+while(i < word1.length() && j < word2.length()){ ... }
+This loop runs as long as there are characters left in both word1 and word2. Inside this loop:
+If flag is true, it appends the current character from word1 to sb and increments i.
+If flag is false, it appends the current character from word2 to sb and increments j.
+After each iteration, flag = !flag; switches the flag's value to alternate between word1 and word2.
+
+Appending Remaining Characters:
+
+while(i < word1.length()){ ... }
+If word1 is longer than word2, this loop appends the remaining characters from word1 to sb.
+while(j < word2.length()){ ... }
+Similarly, if word2 is longer than word1, this loop appends the remaining characters from word2 to sb.
+
+Return Statement:
+
+return sb.toString();
+Finally, the merged string is returned as the output.
