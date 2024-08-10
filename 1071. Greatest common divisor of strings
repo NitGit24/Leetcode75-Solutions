@@ -1,11 +1,3 @@
-## LeetCode 75 Solutions
-
-### GCD of Strings
-- Problem: Given two strings `str1` and `str2`, return the largest string `x` such that `x` divides both `str1` and `str2`.
-- Solution: [GCDOfStrings.java](GCDOfStrings/GCDOfStrings.java)
-
-
-
 
 class Solution {
     public String gcdOfStrings(String str1, String str2) {
